@@ -1,0 +1,11 @@
+http://127.0.0.1:5000/redirect?url=https://oglobo.globo.com/mundo/erdogan-diz-delegacoes-da-suecia-finlandia-que-nao-se-incomodar-em-ir-turquia-nao-diremos-sim-entrada-na-otan-25511207
+
+ENV_SUG
+
+PAGE_404= https://oglobo.globo.com/
+STATUS_404 = 308
+
+STATUS_OK = 302
+
+
+ROTA DE HEALTH CHECK
