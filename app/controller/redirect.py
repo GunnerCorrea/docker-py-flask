@@ -1,4 +1,6 @@
+#from flask import request, redirect
 from flask import request, redirect
+
 import re
 
 class Redirect:
@@ -21,7 +23,11 @@ class Redirect:
         return id
 
     def redirect_home(self):
+        #if env['to_home'] == true:
         return redirect("https://oglobo.globo.com/", code=308)
+
+    def redirect_to(self, url):
+        return redirect(url, code=308)
 
     def get_id(self, url):
 

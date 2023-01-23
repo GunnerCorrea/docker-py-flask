@@ -14,7 +14,7 @@ ADD . /usr/src/app
 RUN pip install -r requirements.txt
 
 #Run python file
-CMD [ "python", "/usr/src/app/index.py" ]
+CMD [ "python", "-u", "/usr/src/app/index.py" ]
 
 #----------ENVS----------
 ENV APP_NAME 'Python Flask'

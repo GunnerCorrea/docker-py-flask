@@ -1,11 +1,30 @@
 http://127.0.0.1:5000/redirect?url=https://oglobo.globo.com/mundo/erdogan-diz-delegacoes-da-suecia-finlandia-que-nao-se-incomodar-em-ir-turquia-nao-diremos-sim-entrada-na-otan-25511207
 
+http://localhost:8080/redirect?url=https://oglobo.globo.com/mundo/erdogan-diz-delegacoes-da-suecia-finlandia-que-nao-se-incomodar-em-ir-turquia-nao-diremos-sim-entrada-na-otan-25511207
+
+
+
+{"_id":{"$numberInt":"25511207"},"url":"https://oglobo.globo.com/mundo/erdogan-diz-delegacoes-da-suecia-finlandia-que-nao-precisam-se-incomodar-em-ir-turquia-nao-diremos-sim-entrada-na-otan-25511207","product":"oglobo"}
+
 ENV_SUG
 
 PAGE_404= https://oglobo.globo.com/
 STATUS_404 = 308
+TO_HOME = false
 
 STATUS_OK = 302
 
+DB_HOST
+DB_USER
+DB_PASS
+
+
 
 ROTA DE HEALTH CHECK
+
+#docker run -d -p 27017:27017 -p 28017:28017 -e AUTH=no tutum/mongodb
+
+
+Documentação
+Teste Unitário
+Rota HealthCheck
