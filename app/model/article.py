@@ -1,9 +1,10 @@
 import pymongo
+from pymongo.errors import BulkWriteError
 
 
 class Article:
 
-    connection_str = "mongo_str"
+    connection_str = ""
 
     def find_url_by_id(self, id):
         client = pymongo.MongoClient(self.connection_str)
@@ -39,6 +40,13 @@ class Article:
 
         col = db['pages']
 
-        page = { "_id": 25511207, "url": "https://oglobo.globo.com/mundo/erdogan-diz-delegacoes-da-suecia-finlandia-que-nao-precisam-se-incomodar-em-ir-turquia-nao-diremos-sim-entrada-na-otan-25511207", "product" : "oglobo" }
+        #correct
+        #data = [{ "_id": 25511207, "url": "https://oglobo.globo.com/mundo/erdogan-diz-delegacoes-da-suecia-finlandia-que-nao-precisam-se-incomodar-em-ir-turquia-nao-diremos-sim-entrada-na-otan-25511207", "product" : "oglobo" }]
+        data = [{ "_id": 25511123, "url": "https://oglobo.globo.com/mundo/erdogan-diz-delegacoes-da-suecia-finlandia-que-nao-precisam-se-incomodar-em-ir-turquia-nao-diremos-sim-entrada-na-otan-25511207", "product" : "oglobo" }]
 
-        line = col.insert_one(page)
+        #line = col.insert_one(page)
+
+        try:
+            line = col.insert_many(data, ordered=False)
+        except BulkWriteError as e:
+            pass
